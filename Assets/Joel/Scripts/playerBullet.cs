@@ -5,7 +5,7 @@ public class playerBullet : MonoBehaviour
     [SerializeField] private float speed = 10f;
     void Start()
     {
-        
+        transform.position += transform.right * 1f;
     }
 
     void Update()

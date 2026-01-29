@@ -766,6 +766,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 66ebfcef-5e8b-4e96-9ca2-2f1b5c9ab8c3
     m_ActionName: 'Gameplay/MousePosition[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8ca3284c-c6f6-42f4-bfb2-3e85ba0e6663
+    m_ActionName: 'Gameplay/Click[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -1156,7 +1160,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1329856399, guid: 1aea10af9092bfd46a723f4d069c8eba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
