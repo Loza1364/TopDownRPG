@@ -17,6 +17,7 @@ public class audioManager : MonoBehaviour
 
     public void PlaySFX(int index)
     {
+        // Play Sfx
         sfxSource.PlayOneShot(sfxFiles[index-1]);
     }
 }
