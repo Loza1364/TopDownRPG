@@ -3,6 +3,7 @@ using UnityEngine;
 public class mage : MonoBehaviour
 {
     private GameObject player;
+    private Rigidbody2D rb;
     private SpriteRenderer sr;
 
     [SerializeField] private float speed = 5f;
@@ -11,19 +12,15 @@ public class mage : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         sr = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // point at cursor
-        Vector2 direction = Camera.main.ScreenToWorldPoint(player.transform.position) - player.transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180f;
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 15 * Time.deltaTime);
-        Vector2 lookDir = Camera.main.ScreenToWorldPoint(player.transform.position);
-        Vector3 mouse = lookDir;
-        transform.position += (mouse - player.transform.position).normalized * speed;
-        sr.flipX = angle > 90 || angle < -90;
+        Vector2 direction = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        sr.flipX = angle < -90 || angle > 90;
+        rb.linearVelocity = new Vector2(direction.normalized.x * speed, direction.normalized.y * speed);
     }
 }
