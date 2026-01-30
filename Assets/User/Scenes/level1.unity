@@ -178,6 +178,10 @@ EdgeCollider2D:
   - {x: 13, y: 10.25}
   - {x: -13, y: 10.25}
   - {x: -13, y: -10.25}
+  - {x: -1.5428371, y: -10.25}
+  - {x: -1.5187058, y: -11.25}
+  - {x: 1.4667516, y: -11.115718}
+  - {x: 1.4972134, y: -10.275054}
   - {x: 13, y: -10.25}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -229,7 +233,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0ef981cddbbdd0e4c9d8b184a34b6472, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9843137}
   m_FlipX: 0
@@ -281,7 +285,7 @@ Transform:
   m_GameObject: {fileID: 157742678}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9527, y: -4.1959, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -591,7 +595,7 @@ GameObject:
   - component: {fileID: 872788421}
   - component: {fileID: 872788423}
   - component: {fileID: 872788422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: _player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -805,7 +809,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1072,7 +1076,7 @@ Transform:
   m_GameObject: {fileID: 1735692801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9527, y: -4.1959, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1266,7 +1270,7 @@ GameObject:
   - component: {fileID: 2013535803}
   - component: {fileID: 2013535804}
   - component: {fileID: 2013535805}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: _mage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1320,12 +1324,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -6351655803138528731, guid: 5edb9f17a4d7d304ca2e76531aea7025, type: 3}
+  m_Sprite: {fileID: -584836975, guid: 5edb9f17a4d7d304ca2e76531aea7025, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.125, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1339,7 +1343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013535798}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1384,7 +1388,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1407,7 +1411,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
+    newSize: {x: 1.125, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1453,7 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60413928757c85d4db11f1f9f3300a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::mage
-  speed: 0.01
+  speed: 3
 --- !u!1 &2053198382
 GameObject:
   m_ObjectHideFlags: 0

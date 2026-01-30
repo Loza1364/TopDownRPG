@@ -181,7 +181,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixilart-sprite (6)_0
+      name: mage_0
       rect:
         serializedVersion: 2
         x: 0
@@ -194,16 +194,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 52a216613b26ad7a0800000000000000
-      internalID: -6351655803138528731
+      spriteID: 2afb61afb6e030d4eb3e47af6d4001b3
+      internalID: -584836975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_1
+      name: mage_1
       rect:
         serializedVersion: 2
         x: 32
@@ -216,16 +216,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 03a1d8141ebc33ec0800000000000000
-      internalID: -3588300309756306896
+      spriteID: 468ea2fd714ca0e49861f1d79727b42e
+      internalID: -1314263505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_2
+      name: mage_2
       rect:
         serializedVersion: 2
         x: 64
@@ -238,16 +238,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 577567e780f9be7d0800000000000000
-      internalID: -2888039877197801611
+      spriteID: 8b7c36c65264aa54582be0f5969a5e19
+      internalID: -747981115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_3
+      name: mage_3
       rect:
         serializedVersion: 2
         x: 96
@@ -260,16 +260,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2503abdff42db1b80800000000000000
-      internalID: -8422907437065293742
+      spriteID: 2659b7374cdb6584fb4e00b7b04e7e0a
+      internalID: -371811762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_4
+      name: mage_4
       rect:
         serializedVersion: 2
         x: 128
@@ -282,16 +282,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0b6cb7dd999323160800000000000000
-      internalID: 7003723703523198640
+      spriteID: d5bf2d29bb754154bb1e9268d48ab6b1
+      internalID: -276513952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_5
+      name: mage_5
       rect:
         serializedVersion: 2
         x: 160
@@ -304,16 +304,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f980a2e7c28b73570800000000000000
-      internalID: 8446422127391410335
+      spriteID: ad9afe4c847638848a5cd30a22161755
+      internalID: -898617648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_6
+      name: mage_6
       rect:
         serializedVersion: 2
         x: 192
@@ -326,16 +326,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 154f031707d5aa270800000000000000
-      internalID: 8262519203881350225
+      spriteID: 1fd18ae88686b544b902172f57332f15
+      internalID: -1955945929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_7
+      name: mage_7
       rect:
         serializedVersion: 2
         x: 224
@@ -348,16 +348,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 760319549b535b770800000000000000
-      internalID: 8625859731150418023
+      spriteID: b42a9553a9eedd549aba6d130b920deb
+      internalID: 450069544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_8
+      name: mage_8
       rect:
         serializedVersion: 2
         x: 256
@@ -370,16 +370,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02258b0924935c490800000000000000
-      internalID: -7726706627625594336
+      spriteID: c712b4f30b1b1c74eaeac645ca50a12e
+      internalID: 1959495254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_9
+      name: mage_9
       rect:
         serializedVersion: 2
         x: 288
@@ -392,16 +392,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96b08f1161243fac0800000000000000
-      internalID: -3822638996149236887
+      spriteID: ed79f9f217c296d46a70bd317d15fece
+      internalID: -1350962338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_10
+      name: mage_10
       rect:
         serializedVersion: 2
         x: 320
@@ -414,16 +414,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ace1097a0e6482150800000000000000
-      internalID: 5848002046838447818
+      spriteID: e0ae69c836cc28d49a159df8621c7be1
+      internalID: 1795160510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_11
+      name: mage_11
       rect:
         serializedVersion: 2
         x: 352
@@ -436,16 +436,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2660420a356e14b70800000000000000
-      internalID: 8881633186994718306
+      spriteID: 4e53b1223d1e0934b8530cbc78775ff7
+      internalID: -1589348137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_12
+      name: mage_12
       rect:
         serializedVersion: 2
         x: 384
@@ -458,16 +458,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ef3271031e43ba890800000000000000
-      internalID: -7445799417147874306
+      spriteID: acddb9fd535acb749b6fb74e82b77462
+      internalID: -838244958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (6)_13
+      name: mage_13
       rect:
         serializedVersion: 2
         x: 416
@@ -480,10 +480,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3f96ed48cf50633a0800000000000000
-      internalID: -6686150014665856525
+      spriteID: e93a06f9c50256a49b3869be72f78462
+      internalID: 200202632
       vertices: []
       indices: 
       edges: []
@@ -504,20 +504,20 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      pixilart-sprite (6)_0: -6351655803138528731
-      pixilart-sprite (6)_1: -3588300309756306896
-      pixilart-sprite (6)_10: 5848002046838447818
-      pixilart-sprite (6)_11: 8881633186994718306
-      pixilart-sprite (6)_12: -7445799417147874306
-      pixilart-sprite (6)_13: -6686150014665856525
-      pixilart-sprite (6)_2: -2888039877197801611
-      pixilart-sprite (6)_3: -8422907437065293742
-      pixilart-sprite (6)_4: 7003723703523198640
-      pixilart-sprite (6)_5: 8446422127391410335
-      pixilart-sprite (6)_6: 8262519203881350225
-      pixilart-sprite (6)_7: 8625859731150418023
-      pixilart-sprite (6)_8: -7726706627625594336
-      pixilart-sprite (6)_9: -3822638996149236887
+      mage_0: -584836975
+      mage_1: -1314263505
+      mage_10: 1795160510
+      mage_11: -1589348137
+      mage_12: -838244958
+      mage_13: 200202632
+      mage_2: -747981115
+      mage_3: -371811762
+      mage_4: -276513952
+      mage_5: -898617648
+      mage_6: -1955945929
+      mage_7: 450069544
+      mage_8: 1959495254
+      mage_9: -1350962338
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
