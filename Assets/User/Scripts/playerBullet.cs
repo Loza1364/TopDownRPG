@@ -24,7 +24,7 @@ public class playerBullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<mage>().Hurt(10);
+            collision.gameObject.GetComponent<mage>().Hurt(-10);
             audioManager audios = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
             audios.PlaySFX(1);
             Destroy(this.gameObject);
