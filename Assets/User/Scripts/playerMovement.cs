@@ -13,6 +13,7 @@ public class playerMovement : MonoBehaviour
     private SpriteRenderer sr;
     private Vector2 moveInput;
     private Animator animator;
+    private float invunderableTime = 0;
 
     void Start()
     {
@@ -36,5 +37,26 @@ public class playerMovement : MonoBehaviour
         }
 
         animator.SetBool("walk", moveInput != Vector2.zero);
+
+        if (invunderableTime > 0)
+        {
+            invunderableTime -= Time.deltaTime;
+            sr.color = new Color(1f, 1f, 1f, 0.5f - (0.5f * Mathf.Sin(20f * (invunderableTime/1.5f))));
+        }
+        else
+        {
+            sr.color = new Color(1f, 1f, 1f, 1f);
+        }
+    }
+
+    public void Hurt(int damage)
+    {
+        if(invunderableTime <= 0)
+        {
+            invunderableTime = 1.5f;
+            audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
+            audio.PlaySFX(1);
+
+        }
     }
 }

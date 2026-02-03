@@ -1,10 +1,16 @@
 using UnityEngine;
 
-public class playerBullet : MonoBehaviour
+public class enemyBullet : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
+
     void Start()
     {
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player.transform.position.x < transform.position.x)
+        {
+            transform.right = -transform.right;
+        }
         transform.position += transform.right * 1f;
     }
 
@@ -20,14 +26,14 @@ public class playerBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<mage>().Hurt(10);
-            audioManager audios = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
-            audios.PlaySFX(1);
             Destroy(this.gameObject);
+            playerMovement player = collision.gameObject.GetComponent<playerMovement>();
+            player.Hurt(-1);
         }
     }
 }
