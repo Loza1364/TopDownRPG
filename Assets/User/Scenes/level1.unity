@@ -1507,6 +1507,7 @@ Transform:
   - {fileID: 65227382}
   - {fileID: 1492760310}
   - {fileID: 2013535800}
+  - {fileID: 2054635112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737626409
@@ -1993,6 +1994,84 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &2054635111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1735692802}
+    m_Modifications:
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686314745378420897, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139750247048520003, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1731797340}
+    - target: {fileID: 5699670020426884277, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5699670020426884277, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778396832600943842, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+      propertyPath: m_Name
+      value: _mage_02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+--- !u!4 &2054635112 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 556371531404733310, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
+  m_PrefabInstance: {fileID: 2054635111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &711264059036394584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2055,7 +2134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6778396832600943842, guid: 876a21d2b79f1ef45afc51f3f83fb600, type: 3}
       propertyPath: m_Name
-      value: _mage
+      value: _mage_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
