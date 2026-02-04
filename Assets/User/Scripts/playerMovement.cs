@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
@@ -7,19 +9,22 @@ public class playerMovement : MonoBehaviour
     [Header("Player Data")]
     public float walkSpeed;
     public float runSpeed;
+    public int HP = 6;
 
     // accessors
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Vector2 moveInput;
     private Animator animator;
-    private float invunderableTime = 0;
+    public float invunderableTime = 0;
+    public Slider playerHP;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerHP.maxValue = HP;
     }
 
     public void Movement(InputAction.CallbackContext context)
@@ -29,6 +34,35 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        if (invunderableTime > 0)
+        {
+            invunderableTime -= Time.deltaTime;
+            sr.color = new Color(1f, 1f, 1f, 0.5f - (0.5f * Mathf.Sin(20f * (invunderableTime / 1.5f))));
+            if (invunderableTime > 0.75f)
+            {
+                animator.SetBool("hurt", true);
+                if (invunderableTime > 1.25f)
+                {
+                    sr.color = Color.red;
+                    rb.linearDamping = 6f;
+                }
+                else
+                {
+                    rb.linearDamping = 0;
+                }
+                    return;
+            }
+            else
+            {
+                rb.linearDamping = 0;
+                animator.SetBool("hurt", false);
+            }
+        }
+        else
+        {
+            sr.color = new Color(1f, 1f, 1f, 1f);
+            animator.SetBool("hurt", false);
+        }
         // player movement & flip sprite
         rb.linearVelocity =  new Vector2(moveInput.x * walkSpeed, moveInput.y * walkSpeed);
         if (moveInput.x != 0)
@@ -37,25 +71,24 @@ public class playerMovement : MonoBehaviour
         }
 
         animator.SetBool("walk", moveInput != Vector2.zero);
-
-        if (invunderableTime > 0)
-        {
-            invunderableTime -= Time.deltaTime;
-            sr.color = new Color(1f, 1f, 1f, 0.5f - (0.5f * Mathf.Sin(20f * (invunderableTime/1.5f))));
-        }
-        else
-        {
-            sr.color = new Color(1f, 1f, 1f, 1f);
-        }
     }
 
     public void Hurt(int damage)
     {
         if(invunderableTime <= 0)
         {
+            if (HP <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                return;
+            }
+            HP -= 1;
+            playerHP.value = HP;
             invunderableTime = 1.5f;
             audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
             audio.PlaySFX(1);
+            float angle = Random.Range(0, 2 * Mathf.PI);
+            rb.linearVelocity = new Vector2(9*Mathf.Cos(angle), 9*Mathf.Sin(angle));
 
         }
     }

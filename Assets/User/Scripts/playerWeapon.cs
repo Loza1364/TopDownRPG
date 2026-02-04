@@ -27,7 +27,7 @@ public class playerWeapon : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        if (context.performed && bulletTimer <= 0)
+        if (context.started && bulletTimer <= 0)
         {
             Instantiate(bullet, transform.position, transform.rotation);
             bulletTimer = 0.2f;
