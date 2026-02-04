@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class mage : MonoBehaviour
     [SerializeField] private GameObject enemyBullet;
     public Slider enemyHP;
     private float HP = 100;
+    private float FlashTime = 0;
 
     void Start()
     {
@@ -48,11 +50,21 @@ public class mage : MonoBehaviour
             sr.sortingLayerName = "front";
         }
         enemyHP.value = HP;
+        if (FlashTime > 0)
+        {
+            FlashTime -= Time.deltaTime;
+            sr.color = Color.red;
+        }
+        else
+        {
+            sr.color = new Color(1f, 1f, 1f, 1f);
+        }
     }
 
     public void Hurt(int damage)
     {
         HP += damage;
+        FlashTime = 0.09f;
         if (HP <= 0)
         {
             Destroy(this.gameObject);

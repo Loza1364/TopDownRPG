@@ -38,13 +38,13 @@ public class playerMovement : MonoBehaviour
         {
             invunderableTime -= Time.deltaTime;
             sr.color = new Color(1f, 1f, 1f, 0.5f - (0.5f * Mathf.Sin(20f * (invunderableTime / 1.5f))));
-            if (invunderableTime > 0.75f)
+            if (invunderableTime > 0.95f)
             {
                 animator.SetBool("hurt", true);
-                if (invunderableTime > 1.25f)
+                if (invunderableTime > 1.3f)
                 {
                     sr.color = Color.red;
-                    rb.linearDamping = 6f;
+                    rb.linearDamping = 7f;
                 }
                 else
                 {
@@ -77,8 +77,14 @@ public class playerMovement : MonoBehaviour
     {
         if(invunderableTime <= 0)
         {
-            if (HP <= 0)
+            if (HP - 1 <= 0)
             {
+                HP = 6;
+                playerHP.value = HP;
+                transform.position = Vector2.zero;
+                sr.flipX = false;
+                Animator crossfade = GameObject.FindWithTag("crossfade").GetComponent<Animator>();
+                crossfade.SetTrigger("fade");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
             }
@@ -88,7 +94,7 @@ public class playerMovement : MonoBehaviour
             audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
             audio.PlaySFX(1);
             float angle = Random.Range(0, 2 * Mathf.PI);
-            rb.linearVelocity = new Vector2(9*Mathf.Cos(angle), 9*Mathf.Sin(angle));
+            rb.linearVelocity = new Vector2(13*Mathf.Cos(angle), 13*Mathf.Sin(angle));
 
         }
     }

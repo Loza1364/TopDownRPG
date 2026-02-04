@@ -32,9 +32,9 @@ public class enemyBullet : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerMovement player = collision.gameObject.GetComponent<playerMovement>();
-            player.Hurt(-1);
-            if (player.invunderableTime !> .1f)
+            if (player.invunderableTime <= 0)
             {
+                player.Hurt(-1);
                 Destroy(this.gameObject);
             }
         }
