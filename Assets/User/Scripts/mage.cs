@@ -67,6 +67,8 @@ public class mage : MonoBehaviour
         FlashTime = 0.09f;
         if (HP <= 0)
         {
+            playerScore score = GameObject.FindWithTag("Player").GetComponent<playerScore>();
+            score.AddScore(500);
             Destroy(this.gameObject);
             audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
             audio.PlaySFX(2);

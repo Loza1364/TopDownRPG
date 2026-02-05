@@ -95,6 +95,12 @@ public class playerMovement : MonoBehaviour
             audio.PlaySFX(1);
             float angle = Random.Range(0, 2 * Mathf.PI);
             rb.linearVelocity = new Vector2(13*Mathf.Cos(angle), 13*Mathf.Sin(angle));
+            playerScore score = GetComponent<playerScore>();
+            if (score.score < 10)
+            {
+                return;
+            }
+            score.AddScore(-10);
         }
     }
 }
