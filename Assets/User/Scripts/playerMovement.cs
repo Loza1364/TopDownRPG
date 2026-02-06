@@ -75,14 +75,18 @@ public class playerMovement : MonoBehaviour
 
     public void Hurt(int damage)
     {
-        if(invunderableTime <= 0)
+        screenEffects cam = GameObject.FindWithTag("MainCamera").GetComponent<screenEffects>();
+        cam.start = true;
+        if (invunderableTime <= 0)
         {
+            audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
             if (HP - 1 <= 0)
             {
                 HP = 6;
                 playerHP.value = HP;
                 transform.position = Vector2.zero;
                 sr.flipX = false;
+                audio.PlaySFX(1);
                 Animator crossfade = GameObject.FindWithTag("crossfade").GetComponent<Animator>();
                 crossfade.SetTrigger("fade");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -91,7 +95,6 @@ public class playerMovement : MonoBehaviour
             HP -= 1;
             playerHP.value = HP;
             invunderableTime = 1.5f;
-            audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
             audio.PlaySFX(1);
             float angle = Random.Range(0, 2 * Mathf.PI);
             rb.linearVelocity = new Vector2(13*Mathf.Cos(angle), 13*Mathf.Sin(angle));

@@ -19,12 +19,14 @@ public class mage : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        InvokeRepeating("Shoot", 1, 1.4f);
+        InvokeRepeating("Shoot", Random.Range(0.5f,5f), 1.4f);
     }
 
     void Shoot()
     {
         Instantiate(enemyBullet, transform);
+        audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
+        audio.PlaySFX(4);
     }
 
     void Update()
@@ -65,13 +67,15 @@ public class mage : MonoBehaviour
     {
         HP += damage;
         FlashTime = 0.09f;
+        screenEffects cam = GameObject.FindWithTag("MainCamera").GetComponent<screenEffects>();
         if (HP <= 0)
         {
+            cam.start = true;
             playerScore score = GameObject.FindWithTag("Player").GetComponent<playerScore>();
             score.AddScore(500);
-            Destroy(this.gameObject);
             audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
-            audio.PlaySFX(2);
+            audio.PlaySFX(1);
+            Destroy(this.gameObject);
         }
     }
 }
