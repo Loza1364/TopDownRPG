@@ -11,6 +11,7 @@ public class spawnLoop : MonoBehaviour
     void Start()
     {
         warning.SetActive(false);
+        StopAllCoroutines();
         StartCoroutine(Spawn());
     }
 
@@ -34,6 +35,7 @@ public class spawnLoop : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         warning.SetActive(false);
         yield return new WaitUntil(() => enemyCount < 1);
+        StopAllCoroutines();
         StartCoroutine(Spawn());
     }
 }
