@@ -8,6 +8,7 @@ TagManager:
   - audioManager
   - Enemy
   - crossfade
+  - spawner
   layers:
   - Default
   - TransparentFX

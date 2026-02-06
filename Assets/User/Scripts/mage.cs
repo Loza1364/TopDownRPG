@@ -75,6 +75,8 @@ public class mage : MonoBehaviour
             score.AddScore(500);
             audioManager audio = GameObject.FindWithTag("audioManager").GetComponent<audioManager>();
             audio.PlaySFX(1);
+            spawnLoop spawn = GameObject.FindWithTag("spawner").GetComponent<spawnLoop>();
+            spawn.enemyCount--;
             Destroy(this.gameObject);
         }
     }

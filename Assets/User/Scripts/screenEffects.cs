@@ -6,11 +6,6 @@ public class screenEffects : MonoBehaviour
     public bool start = false;
     public float duration = 1f;
     public AnimationCurve curve;
-
-    private void Start()
-    {
-        start = true;
-    }
     void Update()
     {
         if (start)
