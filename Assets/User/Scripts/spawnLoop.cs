@@ -25,6 +25,15 @@ public class spawnLoop : MonoBehaviour
         }
     }
 
+    public void OnReset()
+    {
+        StopAllCoroutines();
+        warning.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(Spawn());
+
+    }
+
 
     IEnumerator Spawn()
     {

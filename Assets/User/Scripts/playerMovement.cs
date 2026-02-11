@@ -89,6 +89,9 @@ public class playerMovement : MonoBehaviour
                 audio.PlaySFX(1);
                 Animator crossfade = GameObject.FindWithTag("crossfade").GetComponent<Animator>();
                 crossfade.SetTrigger("fade");
+                spawnLoop Spawner = GameObject.FindWithTag("spawner").GetComponent<spawnLoop>();
+                Spawner.StopAllCoroutines();
+                Spawner.OnReset();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
             }
