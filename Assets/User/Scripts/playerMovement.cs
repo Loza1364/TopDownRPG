@@ -91,7 +91,6 @@ public class playerMovement : MonoBehaviour
                 crossfade.SetTrigger("fade");
                 spawnLoop Spawner = GameObject.FindWithTag("spawner").GetComponent<spawnLoop>();
                 Spawner.StopAllCoroutines();
-                Spawner.OnReset();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
             }

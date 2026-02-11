@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - crossfade
   - spawner
+  - warning
   layers:
   - Default
   - TransparentFX

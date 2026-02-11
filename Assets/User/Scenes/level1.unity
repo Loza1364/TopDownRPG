@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 482532877}
   m_Layer: 5
   m_Name: warning
-  m_TagString: playerHP
+  m_TagString: warning
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

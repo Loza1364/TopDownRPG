@@ -10,6 +10,7 @@ public class spawnLoop : MonoBehaviour
     public Transform[] enemySpawn;
     void Start()
     {
+        warning = GameObject.FindWithTag("warning");
         warning.SetActive(false);
         StopAllCoroutines();
         StartCoroutine(Spawn());
@@ -24,16 +25,6 @@ public class spawnLoop : MonoBehaviour
             Instantiate(enemyPrefabs[0], enemySpawn[i]);
         }
     }
-
-    public void OnReset()
-    {
-        StopAllCoroutines();
-        warning.SetActive(false);
-        StopAllCoroutines();
-        StartCoroutine(Spawn());
-
-    }
-
 
     IEnumerator Spawn()
     {
